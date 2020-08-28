@@ -1,0 +1,132 @@
+.header {
+  position: relative;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 30px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 55px;
+    height: 1px;
+    border-top: 1px dashed var(--color-meadow);
+  }
+}
+
+.info-header {
+  display: flex;
+  align-items: flex-end;
+
+  &__item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -45px;
+      width: 30px;
+      height: 30px;
+      background-color: var(--color-meadow);
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 55px;
+      box-shadow: 0px 6px 20px -5px rgba(36, 191, 121, .8);
+    }
+  }
+
+  &__tel {
+    margin-right: 130px;
+
+
+    &::before {
+      top: 11px;
+      background-image: url('../img/tel.svg');
+      background-size: 12px 12px;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 3px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.03em;
+      text-align: right;
+
+      color: var(--color-hoki);
+    }
+
+    &-text {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+
+      color: #B0BFD6;
+
+    }
+  }
+
+  &__work {
+    margin-right: 90px;
+
+    &::before {
+      top: -6px;
+      background-image: url('../img/clock.svg');
+      background-size: 16px 16px;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      span {
+        color: var(--color-pigeon);
+      }
+    }
+  }
+
+  &__call {
+
+    &-text {
+      position: relative;
+      padding-right: 41px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      letter-spacing: 0.03em;
+      color: var(--color-meadow);
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 21px;
+        height: 30px;
+        transform: translateY(-50%);
+        background-image: url('../img/smartphone.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 9px 15px;
+        background-color: #24BF79;
+        border-radius: 55px;
+        box-shadow: 0px 6px 20px -5px rgba(36, 191, 121, .8);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "vars";
+@import "mixins/visually-hidden";
+@import "fonts";
+@import "vendor/pagepiling.min";
+@import "vendor/normalize";
+@import "vendor/animate.min";
+@import "vendor/slick";
+@import "settings";
+
+
+@import './components/header';
+@import './components/hero';
+
+
+// .burger {
+//   --burger-width: 40px;
+//   --burger-height: 20px;
+//   --burger-line-height: 2px;
+
+//   @include burger;
+// }
