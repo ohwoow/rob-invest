@@ -10,77 +10,311 @@
 
 <body>
 
-  <div class="site-container" id="pagepiling">
+  <header class="header wow fadeInDown">
+    <div class="container header__container">
 
-    <header class="header wow fadeInDown">
-      <div class="container header__container">
+      <a href="#" class="header__logo logo">
+        <img src="img/logo.svg" class="logo__img" alt="">
+      </a>
 
-        <a href="#" class="header__logo logo">
-          <img src="img/logo.svg" class="logo__img" alt="">
-        </a>
+      <div class="header__info info-header">
 
-        <div class="header__info info-header">
+        <div class="info-header__item info-header__tel">
+          <span>Бесплатный звонок</span>
+          <a href="tel:+88000000000" class="info-header__tel-text">8 800 000 - 00 - 00</a>
+        </div>
 
-          <div class="info-header__item info-header__tel">
+        <div class="info-header__item info-header__work">
+          <div class="info-header__work-text">пн - пт: с <span>10:00</span> до <span>18:00</span> мск</div>
+        </div>
+
+        <div class="info-header__call">
+          <a href="#contacts" class="info-header__call-text">Заказать звонок</a>
+        </div>
+
+      </div>
+
+      <div class="header__menu menu-header">
+
+        <a href="#contacts" class="menu-header__link">Контакты</a>
+
+        <div class="menu__icon icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__info">
+          <div class="info-header__item info-header__tel info-header__tel_nav">
             <span>Бесплатный звонок</span>
             <a href="tel:+88000000000" class="info-header__tel-text">8 800 000 - 00 - 00</a>
           </div>
 
-          <div class="info-header__item info-header__work">
+          <div class="info-header__item info-header__work info-header__work_nav">
             <div class="info-header__work-text">пн - пт: с <span>10:00</span> до <span>18:00</span> мск</div>
           </div>
-
-          <div class="info-header__call">
-            <a href="#contacts" class="info-header__call-text">Заказать звонок</a>
-          </div>
-
         </div>
+        <ul class="nav__list">
+          <li data-menuanchor="secondPage" class="nav__item _active"><a href="#secondPage" class="nav__link ">Как работает робот?</a></li>
+          <li data-menuanchor="thirdPage" class="nav__item"><a href="#thirdPage" class="nav__link">Для кого наш робот</a></li>
+          <li data-menuanchor="fourthPage" class="nav__item"><a href="#fourthPage" class="nav__link">Профессиональный подход</a></li>
+          <li data-menuanchor="fivePage" class="nav__item"><a href="#fivePage" class="nav__link">Служба поддержки</a></li>
+          <li data-menuanchor="sixPage" class="nav__item"><a href="#sixPage" class="nav__link">Кто такой брокер, а кто такие мы</a></li>
+          <li data-menuanchor="sevenPage" class="nav__item"><a href="#sevenPage" class="nav__link">Высокий уровень защиты</a></li>
+        </ul>
 
-      </div>
-    </header>
+        <a href="#" class="btn-empty nav__btn">Поддержка</a>
+      </nav>
 
-    <section class="hero">
+    </div>
+  </header>
+
+  <ul class="menu" id="menu">
+    <button class="btn-reset menu__arrow-prev" aria-label="Подняться на секцию выше"></button>
+    <li class="menu__item" data-menuanchor="secondPage" class="active"><a href="#secondPage"><span>01</span>Как работает
+        робот?</a></li>
+    <li class="menu__item" data-menuanchor="thirdPage"><a href="#thirdPage"><span>02</span>Для кого наш робот</a></li>
+    <li class="menu__item" data-menuanchor="fourthPage"><a href="#fourthPage"><span>03</span>Профессиональный подход</a>
+    </li>
+    <li class="menu__item" data-menuanchor="fivePage"><a href="#fivePage"><span>04</span>Служба поддержки</a></li>
+    <li class="menu__item" data-menuanchor="sixPage"><a href="#sixPage"><span>05</span>Кто такой брокер, а кто такие
+        мы</a></li>
+    <li class="menu__item" data-menuanchor="sevenPage"><a href="#sevenPage"><span>06</span>Высокий уровень защиты</a>
+    </li>
+    <button class="btn-reset menu__arrow-next" aria-label="Подняться на секцию ниже"></button>
+  </ul>
+
+  <div class="scroll">
+    <img src="img/arrow-down.svg" class="scroll__arrow wow fadeInDown" data-wow-duration="2s"
+      data-wow-iteration="infinite" alt="">
+    <img src="img/mouse.svg" class="scroll__mouse" alt="">
+  </div>
+
+
+  <div class="hints">
+    <a href="" class="shared"></a>
+
+    <div class="telephone">
+      <a href="tel:+88005323488">8 800 <span>532 - 34 - 88</span></a>
+    </div>
+  </div>
+
+  <div class="site-container" id="fullpage">
+
+    <section class="section hero" data-tooltip="Как работает робот?">
       <div class="container hero__container">
         <div class="hero__description">
-          <h1 class="hero__title wow fadeInUp" data-wow-delay="0.4s">Робот консультант</h1>
-          <h4 class="hero__subtitle wow fadeInUp" data-wow-delay="0.6s">для автоматической торговли акциями и облигациями</h4>
-          <p class="hero__text wow fadeInUp" data-wow-delay="1s"><span>Вложите от 30 000 рублей</span> в акции и получайте доход от их роста</p>
+          <h1 class="hero__title animated fadeInUp" data-wow-delay="0.4s">Робот консультант</h1>
+          <h4 class="hero__subtitle animated fadeInUp" data-wow-delay="0.6s">для автоматической торговли акциями и
+            облигациями</h4>
+          <p class="hero__text animated fadeInUp" data-wow-delay="1s"><span>Вложите от 30 000 рублей</span> в акции и
+            получайте доход от их роста</p>
         </div>
-        <div class="hero__img wow fadeInUp" data-wow-delay="1s">
+        <div class="hero__img animated fadeInUp" data-wow-delay="1s">
           <img src="img/illustration-hero.svg" alt="">
         </div>
-  
-        <div class="hero__features features-hero">
-          <div class="features-hero__item wow fadeInUp" data-wow-delay="1.2s">
+
+        <div class="hero__features features-hero ">
+          <div class="features-hero__item animated fadeInUp" data-wow-delay="1.2s">
             <h5 class="features-hero__title">Почему мы лучшие:</h5>
-            <p class="features-hero__text">Мы опережаем наших конкурентов в спектре настроек и функциональности робота</p>
+            <p class="features-hero__text">Мы опережаем наших конкурентов в спектре настроек и функциональности робота
+            </p>
           </div>
-          <div class="features-hero__item wow fadeInUp" data-wow-delay="1.3s">
+          <div class="features-hero__item animated fadeInUp" data-wow-delay="1.3s">
             <h5 class="features-hero__title">Почему мы лучшие:</h5>
-            <p class="features-hero__text">В нашей тех.поддержке у всех есть опыт работы на форекс более 
-              5 лет, опыт управления инвесторскими счетами более 500.000$, плюс сам советник разрабатывался и модернизировался 5 лет
+            <p class="features-hero__text">В нашей тех.поддержке у всех есть опыт работы на форекс более
+              5 лет, опыт управления инвесторскими счетами более 500.000$, плюс сам советник разрабатывался и
+              модернизировался 5 лет
             </p>
           </div>
         </div>
 
-        <div class="hero__phrase wow fadeInRight" data-wow-delay="1.5s">
+        <div class="hero__phrase animated fadeInRight" data-wow-delay="1.5s">
           <span>Просто использовать</span> для личных целей!
-        </div>
-
-        <div class="scroll">
-          <img src="img/arrow-down.svg" class="scroll__arrow wow fadeInDown" data-wow-duration="2s" data-wow-iteration="infinite" alt="">
-          <img src="img/mouse.svg"  class="scroll__mouse"alt="">
         </div>
       </div>
     </section>
+
+    <div class="section about section_padding-left">
+      <h1 class="visually-hidden">О нас</h1>
+      <div class="container container-flex">
+        <div class="about__content ">
+          <h2 class="title about__title is-animated">Проще не бывает</h2>
+          <p class="text about__text is-animated">Мы создали автоматизированного торгового робота для рынка
+            <strong>Forex.</strong></p>
+          <p class="text about__text is-animated">Это программа которая покупает и продает акции по намеченной
+            стратегии, без вмешательства со стороны трейдера.
+          </p>
+          <p class="text about__text about__text_no-mb is-animated">Мы устанавливаем торгового советника на существующую
+            платформу <strong>MetaTrader4</strong> или <strong>MetaTrader5.</strong>
+          </p>
+
+          <a href="#" class="btn about__btn is-animated">Подробнее</a>
+        </div>
+        <div class="about__img is-animated">
+          <img src="img/illustration-about.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="section options section_padding-left">
+      <div class="container container-flex">
+        <div class="options__content">
+          <h2 class="title options__title is-animated">Для кого наш робот?</h2>
+          <div class="options__subtitle is-animated">Робота покупают опытные трейдеры, чтобы:</div>
+          <ul class="options__list is-animated">
+            <li>
+              <span>Разгрузить свой рабочий день</span>
+            </li>
+            <li>
+              <span>Экономить время на анализ рынка</span>
+            </li>
+            <li>
+              <span>Не терять прибыль во время обучения (для новичков)</span>
+            </li>
+            <li>
+              <span>Не делить прибыль с наемными трейдерами</span>
+            </li>
+          </ul>
+          <a href="#" class="btn options__btn is-animated">Подробнее</a>
+        </div>
+        <div class="options__img is-animated">
+          <img src="img/illustration-options.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="section how-it-works section_padding-left">
+      <div class="container container-flex">
+        <div class="how-it-works__content">
+          <h2 class="title how-it-works__title is-animated">Профессиональный подход</h2>
+          <p class="text how-it-works__text is-animated">
+            Мы отправляем к вам домой робота на флэш карте. <strong>Rob-Invest</strong>
+            это математический алгоритм, написанный в редакторе <strong>MetaQuotes</strong>, основанный на графических
+            индикаторах.
+            Настройка робота происходит исходя из пожеланий и стратегии клиента. Вы можете менять и
+            <strong>контролировать</strong> то,
+            как часто робот будет выводить <strong>деньги</strong>, будет ли он копить средства, хочет ли он отработать
+            бонусы и тд.
+          </p>
+          <p class="text how-it-works__text is-animated">
+            Если у вас нет опыта или нет пожеланий и стратегии, мы устанавливаем стандартные настройки с
+            <strong>доходностью</strong>
+            около 5% в месяц.
+          </p>
+          <p class="text how-it-works__text is-animated">
+            Один раз в 2 недели наша служба поддержки с вами связывается,
+            для проверки советника, обновления при выходе новой версии
+            или изменения алгоритма. Или же Вы сами можете нам позвонить
+            и посоветоваться по поводу изменения настроек..
+          </p>
+        </div>
+        <div class="how-it-works__img is-animated">
+          <img src="img/how-it-works_illustration.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="section support section_padding-left">
+      <div class="container container-flex">
+        <div class="support__content">
+          <h2 class="title support__title is-animated">Служба поддержки</h2>
+          <p class="text support__text is-animated">
+            В нашей службе поддержки у всех членов команды есть опыт работы на рынке <strong>Forex более 5 лет</strong>,
+            а так же опыт
+            управления инвесторскими счетами в сумму 500.000$
+          </p>
+          <p class="text support__text is-animated">
+            Именно позвонив нам вы сможете получить ответ на любой
+            вопрос <strong>8 (800) 800 80-80</strong> и начать <strong>зарабатывать</strong>.
+          </p>
+          <p class="text support__text is-animated">
+            Так же, сама программа разрабатывалась и модернизировался более 5 лет лучшими специалистами в своей области.
+          </p>
+          <a href="#" class="btn support__btn is-animated">Подробнее</a>
+        </div>
+        <div class="support__img is-animated">
+          <img src="img/support__illustration.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="section info section_padding-left">
+      <div class="container container-flex">
+        <div class="info__content">
+          <h2 class="title info__title is-animated">Кто такой брокер,
+            а кто такие мы?</h2>
+          <p class="text info__text is-animated">
+            <strong>Броокер</strong> — юридическое или физическое лицо, выполняющее посреднические функции между
+            продавцом и покупателем.
+            Он является специалистом в определённых областях и владеет большим объёмом информации о сделках.
+          </p>
+          <p class="text info__text is-animated">
+            <strong>Rob-Invest</strong> - автоматизированный торговый советник для торговли на рынке Forex. это
+            программа подачи заявок
+            брокеру без вмешательства со стороны трейдера.
+          </p>
+          <a href="#" class="btn about__btn is-animated">Подробнее</a>
+        </div>
+        <div class="info__img is-animated">
+          <img src="img/illustration-info.svg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+    <div class="section defense  section_padding-left">
+      <div class="container container-flex">
+        <div class="defense__content">
+          <h2 class="title defense__title is-animated">Высокий уровень защиты</h2>
+          <p class="text defense__text is-animated">
+            Ваши ценные бумаги под защитой государства, поскольку запись 
+            о них хранится в центральном депозитарии Российской Федерации.
+          </p>
+          <p class="text defense__text is-animated">
+            Ваши персональные данные в безопасности благодаря защищённому SSL-соединению.
+          </p>
+          <p class="text defense__text is-animated">
+            Сделки проводятся только с вашего согласия: на ваш телефон приходят СМС для подтверждения продажи и покупки ценных бумаг. 
+          </p>
+          <p class="text defense__text defense__text_white is-animated">
+            Вы единственный официальный владелец ценных бумаг.<br>
+            Никаких посредников.
+          </p>
+          <a href="#" class="btn defense__btn is-animated">Подробнее</a>
+        </div>
+        <div class="defense__img is-animated">
+          <img src="img/illustration-defense.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
 
   </div>
 
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/pagepiling.min.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="js/fullpage.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/main.js"></script>
+
 
 </html>

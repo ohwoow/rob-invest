@@ -1,16 +1,17 @@
 @import "vars";
 @import "mixins/visually-hidden";
 @import "fonts";
-@import "vendor/pagepiling.min";
 @import "vendor/normalize";
 @import "vendor/animate.min";
-@import "vendor/slick";
+@import "vendor/swiper.min";
+@import "vendor/fullpage.min";
 @import "settings";
 
 
 @import './components/header';
 @import './components/hero';
-
+@import './components/section-text';
+@import './components/burger-menu';
 
 // .burger {
 //   --burger-width: 40px;

@@ -9,7 +9,7 @@
     height: 100%;
   }
 
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -29,6 +29,8 @@
     letter-spacing: 0.03em;
 
     color: #FFFFFF;
+
+    animation-delay: 0.4s;
   }
 
   &__subtitle {
@@ -38,6 +40,8 @@
     line-height: 26px;
     letter-spacing: 0.03em;
     color: var(--color-pigeon);
+
+    animation-delay: 0.6s;
   }
 
   &__text {
@@ -46,6 +50,8 @@
     line-height: 22px;
     letter-spacing: 0.03em;
     color: var(--color-pigeon);
+
+    animation-delay: 1s;
 
     span {
       font-weight: bold;
@@ -57,6 +63,8 @@
     position: absolute;
     top: 0;
     right: 9%;
+
+    animation-delay: 1s;
   }
 
   &__features {
@@ -71,6 +79,8 @@
     right: 55px;
     max-width: 360px;
 
+    animation-delay: 1.5s;
+
     span {
       color: var(--color-pigeon);
     }
@@ -84,9 +94,12 @@
   &__item {
     margin-right: 60px;
 
+    animation-delay: 1.2s;
+
     &:last-child {
       margin: 0;
       max-width: 490px;
+      animation-delay: 1.3s;
     }
   }
 
