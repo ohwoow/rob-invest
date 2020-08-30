@@ -309,5 +309,7 @@ function mask(event) {
   setCursorPosition(i, this)
 }
 
-var input = document.querySelector("#telephone");
-input.addEventListener("input", mask, false)
+const telephonesContacts = document.querySelectorAll(".telephone-contacts");
+for (input of telephonesContacts) {
+  input.addEventListener("input", mask, false)
+}
