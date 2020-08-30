@@ -24,6 +24,21 @@ document.addEventListener('click', function (e) {
   }
 });
 
+
+const navLeftMenu = document.querySelector('.menu__slider')
+
+const navLeftMenuSlider = new Swiper(navLeftMenu, {
+  slidesPerView: 6,
+
+  direction: 'vertical',
+
+  navigation: {
+    nextEl: '.menu__arrow-next',
+    prevEl: '.menu__arrow-prev',
+  },
+})
+
+
 new fullpage('#fullpage', {
   licenseKey: '59DB8F6F-B819439E-9C9C8AD2-C475CC00',
   autoScrolling: true,
@@ -62,7 +77,8 @@ new fullpage('#fullpage', {
     const isAnimatedRates = document.querySelectorAll('.rates .is-animated')
     const isAnimatedContacts = document.querySelectorAll('.contacts .is-animated')
 
-    let counter = 0.3
+    let animationSpeed = 0.3
+
     //  Меняем шапку и скрываем навигацинное меню по секциям на первом экране
     if (origin.index == 0 && direction == 'down') {
       header.classList.add('active')
@@ -72,6 +88,20 @@ new fullpage('#fullpage', {
       header.classList.remove('active')
       hint.style.display = 'none'
       menu.style.display = 'none'
+    } else if (origin.index == 8 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 7 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 6 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 5 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 4 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 3 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
+    } else if (origin.index == 2 && direction == 'up') {
+      navLeftMenuSlider.slidePrev()
     }
 
     // Добавляем класс для анимации
@@ -83,8 +113,8 @@ new fullpage('#fullpage', {
     // Добавляем задержку
     function addDelay(selector) {
       for (let i = 0; i < selector.length; i++) {
-        counter += 0.2
-        selector[i].style.animationDelay = counter + 's'
+        animationSpeed += 0.2
+        selector[i].style.animationDelay = animationSpeed + 's'
       }
     }
     // Анимация
@@ -93,6 +123,7 @@ new fullpage('#fullpage', {
       case 0:
         addAnimation(isAnimatedAbout, 'fadeInUp')
         addDelay(isAnimatedAbout)
+
         break
       case 1:
         addAnimation(isAnimatedOptions, 'fadeInDown')
@@ -109,6 +140,7 @@ new fullpage('#fullpage', {
       case 4:
         addAnimation(isAnimatedInfo, 'fadeInUp')
         addDelay(isAnimatedInfo)
+        navLeftMenuSlider.slideNext()
         break
       case 5:
         addAnimation(isAnimatedDefense, 'fadeInDown')
@@ -121,18 +153,22 @@ new fullpage('#fullpage', {
       case 7:
         addAnimation(isAnimatedInstallation, 'fadeInDown')
         addDelay(isAnimatedInstallation)
+        navLeftMenuSlider.slideNext()
         break
       case 8:
         addAnimation(isAnimatedReviews, 'fadeInUp')
         addDelay(isAnimatedReviews)
+        navLeftMenuSlider.slideNext()
         break
       case 9:
         addAnimation(isAnimatedRates, 'fadeInDown')
         addDelay(isAnimatedRates)
+        navLeftMenuSlider.slideNext()
         break
       case 10:
         addAnimation(isAnimatedContacts, 'fadeInUp')
         addDelay(isAnimatedContacts)
+        navLeftMenuSlider.slideNext()
         break
     }
   },
@@ -146,15 +182,15 @@ menuNav.style.display = 'none'
 hints.style.display = 'none'
 
 // Стрелки для перключения по секциям
-const arrowUp = document.querySelector('.menu__arrow-prev')
-const arrowDown = document.querySelector('.menu__arrow-next')
+// const arrowUp = document.querySelector('.menu__arrow-prev')
+// const arrowDown = document.querySelector('.menu__arrow-next')
 
-arrowUp.addEventListener('click', () => {
-  fullpage_api.moveSectionUp();
-})
-arrowDown.addEventListener('click', () => {
-  fullpage_api.moveSectionDown();
-})
+// arrowUp.addEventListener('click', () => {
+//   fullpage_api.moveSectionUp();
+// })
+// arrowDown.addEventListener('click', () => {
+//   fullpage_api.moveSectionDown();
+// })
 
 // Добавляем активный класс элементу выезжающего меню
 const navItem = document.querySelectorAll('.nav__item')
@@ -179,7 +215,7 @@ const prevArrow = document.querySelector('.form-quiz__arrow_prev')
 const paginationSlider = document.querySelector('.form-quiz__arrow_next')
 const slides = document.querySelectorAll('.form-quiz .swiper-slide')
 
-let num = 0
+let counter = 0
 
 const quizSlider = new Swiper(quiz, {
   slidesPerView: 1,
@@ -195,13 +231,13 @@ const quizSlider = new Swiper(quiz, {
 })
 
 nextArrow.addEventListener('click', (evt) => {
-  num++
-  if (slides.length - 1 === num) {
+  counter++
+  if (slides.length - 1 === counter) {
     arrowsSlider.style.display = 'none'
   }
 })
 prevArrow.addEventListener('click', (evt) => {
-  num--
+  counter--
 })
 
 
@@ -219,6 +255,8 @@ const qreviewsSlider = new Swiper(reviews, {
     prevEl: '.slider-reviews__arrow_prev',
   },
 })
+
+// Меню слайдер
 
 
 // Убираем checked с уже активного чекбокса
