@@ -22,7 +22,7 @@
 
 
 .options {
-
+  background: url('../img/bg-options.svg') center/cover no-repeat;
 
   &__subtitle {
     margin-bottom: 20px;
@@ -67,6 +67,7 @@
 }
 
 .how-it-works {
+  background: url('../img/bg_how-it-works.svg') center/cover no-repeat;
   &__content {
     max-width: 640px;
   }
@@ -77,6 +78,7 @@
 }
 
 .support {
+  background: url('../img/bg-support.svg') center/cover no-repeat;
   &__content {
     max-width: 560px;
   }
@@ -87,7 +89,7 @@
 }
 
 .info {
-
+  background: url('../img/bg-info.svg') center/cover no-repeat;
   &__content {
     max-width: 600px;
   }
@@ -98,7 +100,7 @@
 }
 
 .defense {
-
+  background: url('../img/bg-defense.svg') center/cover no-repeat;
   &__content {
     max-width: 605px;
   }
@@ -113,4 +115,17 @@
   &__btn {
     margin-top: 50px;
   }
+}
+
+.installation {
+  background: url('../img/bg-installation.svg') center/cover no-repeat;
+
+  &__content {
+    max-width: 605px;
+
+    &__btn {
+      margin-top: 50px;
+    }
+  }
+
 }

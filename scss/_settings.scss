@@ -2,8 +2,6 @@ html {
   box-sizing: border-box;
 }
 
-
-
 *,
 *::before,
 *::after {
@@ -110,6 +108,9 @@ ul {
     width: 13px;
     height: 42px;
     margin-bottom: 20px;
+
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
   }
 
   &__mouse {
@@ -268,3 +269,40 @@ ul {
 
 }
 
+
+.slider-nav {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+
+
+
+  &__arrow_prev,
+  &__arrow_next {
+    width: 30px;
+    height: 30px;
+
+    background-color: var(--color-meadow);
+    box-shadow: 0px 0px 8px 1px rgba(36, 191, 121, 0.8);
+    border-radius: 55px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px 14px;
+  }
+
+
+  &__arrow_prev {
+    margin-right: 20px;
+    background-image: url('../img/arrow-left.svg');
+  }
+
+  &__arrow_next {
+    background-image: url('../img/arrow-right.svg');
+  }
+}
+
+.swiper-button-disabled {
+  background-color: #163666;
+  box-shadow: none;
+}
