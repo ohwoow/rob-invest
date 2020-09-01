@@ -389,3 +389,13 @@ contactInputName.forEach(input => {
     this.value = this.value.replace(/[^а-я/a-z\s]+/ig, "");
   })
 })
+
+// При клике на логотип убираем меню, класс у шапки и нижний блок
+const header = document.querySelector(".header");
+const logo = document.querySelector('.header__logo')
+
+logo.addEventListener('click', (evt) => {
+  header.classList.remove('active')
+  menuNav.style.display = 'none'
+  hints.style.display = 'none'
+})
