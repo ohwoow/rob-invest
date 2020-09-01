@@ -9,8 +9,12 @@
   padding: 40px 0;
 
   &.active {
-
     padding: 50px 0;
+
+    .header__container {
+      flex-direction: row;
+      align-items: center;
+    }
 
     .info-header {
       display: none;
@@ -211,12 +215,12 @@
         ;
       }
 
-      
-    &._active {
-      a {
-        color: var(--color-meadow);
+
+      &._active {
+        a {
+          color: var(--color-meadow);
+        }
       }
-    }
     }
   }
 

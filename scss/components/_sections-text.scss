@@ -13,10 +13,6 @@
       margin: 0;
     }
   }
-
-  &__btn {
-    margin-top: 50px;
-  }
 }
 
 
@@ -61,19 +57,12 @@
     }
   }
 
-  &__btn {
-    margin-top: 50px;
-  }
 }
 
 .how-it-works {
   background: url('../img/bg_how-it-works.svg') center/cover no-repeat;
   &__content {
     max-width: 640px;
-  }
-
-  &__btn {
-    margin-top: 50px;
   }
 }
 
@@ -82,20 +71,12 @@
   &__content {
     max-width: 560px;
   }
-
-  &__btn {
-    margin-top: 50px;
-  }
 }
 
 .info {
   background: url('../img/bg-info.svg') center/cover no-repeat;
   &__content {
     max-width: 600px;
-  }
-
-  &__btn {
-    margin-top: 50px;
   }
 }
 
@@ -112,9 +93,6 @@
     }
   }
 
-  &__btn {
-    margin-top: 50px;
-  }
 }
 
 .installation {
@@ -122,10 +100,6 @@
 
   &__content {
     max-width: 605px;
-
-    &__btn {
-      margin-top: 50px;
-    }
   }
 
 }

@@ -27,6 +27,9 @@
   }
 }
 
+.form-quiz__slider-wrapper {
+  max-height: 450px;
+}
 .form-quiz {
   position: relative;
   width: 100%;
@@ -110,12 +113,16 @@
   }
 
   &__nav {
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    z-index: 5;
+    justify-content: center;
+    margin: 0 0 30px;
   }
 
- 
+  &__pag {
+    position: static;
+    padding-bottom: 20px;
+  }
 }
 
 
@@ -160,7 +167,7 @@
 
 
 .form-quiz__range {
-  margin-top: 150px;
+  margin-top: 80px;
   height: 5px;
   width: 100%;
   background: #163666;

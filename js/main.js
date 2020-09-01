@@ -1,3 +1,6 @@
+// cброс хэша в адресной строке при перезагрузке (из-за плагина)
+// history.pushState('', document.title, window.location.pathname);
+
 // закрытие меню
 const menuBtn = document.querySelector('.icon-menu'),
   menu = document.querySelector('.nav');
@@ -41,7 +44,9 @@ const navLeftMenuSlider = new Swiper(navLeftMenu, {
 
 new fullpage('#fullpage', {
   licenseKey: '59DB8F6F-B819439E-9C9C8AD2-C475CC00',
+  scrollOverflow: true,
   autoScrolling: true,
+  normalScrollElements: '.form-quiz__expense, .form-quiz__time, .form-quiz__spend, .contact-details__label',
   anchors: [
     'firstPage',
     'secondPage',
@@ -126,7 +131,7 @@ new fullpage('#fullpage', {
 
         break
       case 1:
-        addAnimation(isAnimatedOptions, 'fadeInDown')
+        addAnimation(isAnimatedOptions, 'fadeInUp')
         addDelay(isAnimatedOptions)
         break
       case 2:
@@ -134,7 +139,7 @@ new fullpage('#fullpage', {
         addDelay(isAnimatedHowItWorks)
         break
       case 3:
-        addAnimation(isAnimatedSupport, 'fadeInDown')
+        addAnimation(isAnimatedSupport, 'fadeInUp')
         addDelay(isAnimatedSupport)
         break
       case 4:
@@ -143,7 +148,7 @@ new fullpage('#fullpage', {
         navLeftMenuSlider.slideNext()
         break
       case 5:
-        addAnimation(isAnimatedDefense, 'fadeInDown')
+        addAnimation(isAnimatedDefense, 'fadeInUp')
         addDelay(isAnimatedDefense)
         break
       case 6:
@@ -151,9 +156,10 @@ new fullpage('#fullpage', {
         addDelay(isAnimatedQuiz)
         break
       case 7:
-        addAnimation(isAnimatedInstallation, 'fadeInDown')
+        addAnimation(isAnimatedInstallation, 'fadeInUp')
         addDelay(isAnimatedInstallation)
         navLeftMenuSlider.slideNext()
+
         break
       case 8:
         addAnimation(isAnimatedReviews, 'fadeInUp')
@@ -161,7 +167,7 @@ new fullpage('#fullpage', {
         navLeftMenuSlider.slideNext()
         break
       case 9:
-        addAnimation(isAnimatedRates, 'fadeInDown')
+        addAnimation(isAnimatedRates, 'fadeInUp')
         addDelay(isAnimatedRates)
         navLeftMenuSlider.slideNext()
         break
@@ -192,7 +198,7 @@ hints.style.display = 'none'
 //   fullpage_api.moveSectionDown();
 // })
 
-// Добавляем активный класс элементу выезжающего меню
+// Добавляем активный класс элементу выезжающего меню --------
 const navItem = document.querySelectorAll('.nav__item')
 
 function removeClass() {
@@ -205,9 +211,11 @@ navItem.forEach(item => {
   item.addEventListener('click', (evt) => {
     removeClass()
     item.classList.add('_active')
+    menu.classList.remove('_active')
   })
 })
 
+// Квиз -------------------------------
 const quiz = document.querySelector('.form-quiz')
 const arrowsSlider = document.querySelector('.form-quiz__nav')
 const nextArrow = document.querySelector('.form-quiz__arrow_next')
@@ -220,6 +228,7 @@ let counter = 0
 const quizSlider = new Swiper(quiz, {
   slidesPerView: 1,
   allowTouchMove: false,
+  autoHeight: true,
   navigation: {
     nextEl: '.form-quiz__arrow_next',
     prevEl: '.form-quiz__arrow_prev',
@@ -228,6 +237,7 @@ const quizSlider = new Swiper(quiz, {
     el: '.swiper-pagination',
     type: 'bullets',
   },
+
 })
 
 nextArrow.addEventListener('click', (evt) => {
@@ -245,15 +255,23 @@ prevArrow.addEventListener('click', (evt) => {
 
 const reviews = document.querySelector('.slider-reviews')
 
-const qreviewsSlider = new Swiper(reviews, {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 50,
+const reviewsSlider = new Swiper(reviews, {
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 20,
 
   navigation: {
     nextEl: '.slider-reviews__arrow_next',
     prevEl: '.slider-reviews__arrow_prev',
   },
+
+  breakpoints: {
+    1366: {
+      spaceBetween: 50,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    }
+  }
 })
 
 // Меню слайдер
@@ -295,6 +313,7 @@ noUiSlider.create(timeSlider, {
 noUiSlider.create(expenseSlider, {
   start: 0,
   connect: 'lower',
+  step: 1,
   range: {
     'min': 0,
     'max': 10000000

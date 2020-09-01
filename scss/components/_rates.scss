@@ -9,8 +9,11 @@
 }
 
 .items-rates {
-  display: flex;
-  flex-wrap: wrap;
+ 
+  &__main,
+  &__other {
+    display: flex;
+  }
 
   &__item {
     background: #112441;

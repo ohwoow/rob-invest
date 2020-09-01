@@ -78,6 +78,12 @@ ul {
   }
 }
 
+
+.quiz__container {
+
+  justify-content: flex-end;
+}
+
 .is-hidden {
   display: none !important; // stylelint-disable-line declaration-no-important
 }
@@ -97,7 +103,7 @@ ul {
 .scroll {
   position: fixed;
   top: 50%;
-  right: 55px;
+  right: 25px;
   z-index: 2;
   transform: translateY(-50%);
   display: flex;
@@ -145,6 +151,10 @@ ul {
   border: 2px solid rgba(#24BF79, .25);
 }
 
+.section__btn {
+  margin-top: 50px;
+}
+
 .title {
   margin-bottom: 20px;
   font-weight: 900;
@@ -178,6 +188,7 @@ ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   z-index: 2;
 }
 
@@ -216,7 +227,7 @@ ul {
   left: 55px;
   
   transform: translateY(-50%);
-  z-index: 10;
+  z-index: 9;
 
   &__slider {
     width: 100%;
@@ -272,6 +283,7 @@ ul {
     width: 14px;
     height: 14px;
     background: url('../img/arrow_next.svg') center no-repeat;
+    background-color: transparent !important;
 
     &:focus {
       outline: none;
