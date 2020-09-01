@@ -212,6 +212,7 @@ navItem.forEach(item => {
     removeClass()
     item.classList.add('_active')
     menu.classList.remove('_active')
+    menuBtn.classList.remove('active')
   })
 })
 

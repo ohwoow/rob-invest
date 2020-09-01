@@ -189,7 +189,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
+  z-index: 0;
 
   animation: showElement 0.8s forwards;
 
@@ -198,6 +198,7 @@ ul {
 
 .social-hints {
   position: relative;
+
   &__shared {
     display: inline-block;
     margin-left: 55px;
@@ -220,12 +221,12 @@ ul {
     display: flex;
 
     transition: 0.2s;
-    transform:  translateX(-100%);
+    transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
 
     &.active {
-      transform:  translateX(0%);
+      transform: translateX(0%);
       opacity: 1;
       visibility: visible;
     }
@@ -376,4 +377,24 @@ ul {
 .swiper-button-disabled {
   background-color: #163666;
   box-shadow: none;
+}
+
+.mini-footer {
+  position: absolute;
+  bottom: 30px;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+
+  a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 12px;
+    color: var(--color-hoki);
+
+    span {
+      font-weight: normal;
+      color: var(--color-white);
+    }
+  }
 }
