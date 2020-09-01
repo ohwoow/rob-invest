@@ -66,6 +66,19 @@
     }
   }
 
+  .options__list {
+
+    li {
+      display: flex;
+    }
+  }
+
+  .options__img {
+    img {
+      width: 620px;
+    }
+  }
+
   .rates {
     padding-left: 285px;
   }
@@ -265,8 +278,36 @@
     left: 30px;
     bottom: 40px;
   }
+}
 
+@media(min-height: 1366px) and (min-width: 1024px) {
+  .features-hero {
+    display: flex;
+  }
 
+  .hero__features {
+    position: absolute;
+    bottom: 86px;
+    left: 30px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .menu {
+    left: 20px;
+
+    &__item {
+
+      a {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+  .quiz__container {
+    padding-left: 0;
+  }
 }
 
 @media(max-width: 1024px) {
@@ -289,18 +330,6 @@
     padding-left: 40px;
   }
 
-  .menu {
-    left: 20px;
-
-    &__item {
-
-      a {
-        span {
-          display: none;
-        }
-      }
-    }
-  }
 
   .hints {
     bottom: 20px;
@@ -558,6 +587,11 @@
 
   .info-header__tel {
     display: block;
+    margin-right: 0;
+
+    span {
+      text-align: center;
+    }
   }
 
   .info-header__call {
@@ -681,11 +715,11 @@
   }
 
   .slider-reviews {
-    padding-bottom: 0;
+    padding-bottom: 20px;
   }
 
   .slider-reviews__nav {
-    display: none;
+    bottom: 2px;
   }
 
   .items-rates__item_main {
@@ -805,6 +839,10 @@
   .rates__container {
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+
+  .social-hints {
+    left: -35px;
   }
 }
 

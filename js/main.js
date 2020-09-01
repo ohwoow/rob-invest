@@ -1,4 +1,4 @@
-// cброс хэша в адресной строке при перезагрузке (из-за плагина)
+// cброс хэша(якоря) в адресной строке при перезагрузке (из-за плагина)
 // history.pushState('', document.title, window.location.pathname);
 
 // закрытие меню
@@ -41,7 +41,18 @@ const navLeftMenuSlider = new Swiper(navLeftMenu, {
   },
 })
 
+// Социальные иконки
 
+const socialShared = document.querySelector('.social-hints__shared')
+const socialLink = document.querySelector('.social-hints__links')
+
+
+socialShared.addEventListener('click', (evt) => {
+  evt.preventDefault()
+  socialLink.classList.toggle('active')
+})
+
+// Плагин fullpage.js
 new fullpage('#fullpage', {
   licenseKey: '59DB8F6F-B819439E-9C9C8AD2-C475CC00',
   scrollOverflow: true,
@@ -327,6 +338,16 @@ noUiSlider.create(spendSlider, {
 });
 
 
+const sendBtn = document.querySelector('.contact-details__btn')
+
+sendBtn.addEventListener('click', () => {
+  let timeSliderValue = timeSlider.noUiSlider.get()
+  let expenseSliderValue = expenseSlider.noUiSlider.get();
+  let spendSliderValue = spendSlider.noUiSlider.get();
+})
+
+
+
 // маска для номера телефона
 function setCursorPosition(pos, elem) {
   elem.focus();
@@ -359,3 +380,12 @@ const telephonesContacts = document.querySelectorAll(".telephone-contacts");
 for (input of telephonesContacts) {
   input.addEventListener("input", mask, false)
 }
+
+// Валидация инпута Имени
+
+const contactInputName = document.querySelectorAll('.contact-details__input')
+contactInputName.forEach(input => {
+  input.addEventListener('input', function () {
+    this.value = this.value.replace(/[^а-я/a-z\s]+/ig, "");
+  })
+})

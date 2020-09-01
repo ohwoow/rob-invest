@@ -8,20 +8,29 @@
   z-index: 10;
   padding: 40px 0;
 
+
   &.active {
-    padding: 50px 0;
+    padding: 40px 0;
+    animation: showElement 0.8s forwards;
 
     .header__container {
       flex-direction: row;
       align-items: center;
+      min-height: 35px;
     }
 
     .info-header {
       display: none;
+
+      animation: showElement 0.8s forwards;
     }
 
     .menu-header {
       display: flex;
+    }
+
+    &::after {
+      top: 50px;
     }
   }
 
@@ -43,6 +52,9 @@
     background-size: 59px 13px;
   }
 }
+
+
+
 
 
 .info-header {
