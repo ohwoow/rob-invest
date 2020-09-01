@@ -93,21 +93,10 @@ new fullpage('#fullpage', {
       header.classList.remove('active')
       hint.style.display = 'none'
       menu.style.display = 'none'
-    } else if (origin.index == 8 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 7 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 6 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 5 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 4 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 3 && direction == 'up') {
-      navLeftMenuSlider.slidePrev()
-    } else if (origin.index == 2 && direction == 'up') {
+    } else if (origin.index >= 2 && direction == 'up') {
       navLeftMenuSlider.slidePrev()
     }
+
 
     // Добавляем класс для анимации
     function addAnimation(selector, animation) {
