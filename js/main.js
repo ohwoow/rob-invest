@@ -79,7 +79,8 @@ new fullpage('#fullpage', {
     const loadedSection = this,
       header = document.querySelector("header.header"),
       hint = document.querySelector(".hints"),
-      menu = document.querySelector("#menu");
+      menu = document.querySelector("#menu"),
+      linkToReji = document.querySelector('.mini-footer');
 
     const isAnimatedAbout = document.querySelectorAll('.about .is-animated')
     const isAnimatedOptions = document.querySelectorAll('.options .is-animated')
@@ -94,6 +95,12 @@ new fullpage('#fullpage', {
     const isAnimatedContacts = document.querySelectorAll('.contacts .is-animated')
 
     let animationSpeed = 0.3
+
+    if (origin.index == 10) {
+      linkToReji.style.display = 'block'
+    } else {
+      linkToReji.style.display = 'none'
+    }
 
     //  Меняем шапку и скрываем навигацинное меню по секциям на первом экране
     if (origin.index == 0 && direction == 'down') {
@@ -175,28 +182,21 @@ new fullpage('#fullpage', {
         addAnimation(isAnimatedContacts, 'fadeInUp')
         addDelay(isAnimatedContacts)
         navLeftMenuSlider.slideNext()
+        linkToReji.style.display = 'block'
         break
     }
   },
 });
 
 
-// Cкрываем меню и кнопку "поделиться" с телефоном сразу
+// Cкрываем меню и кнопку "поделиться" с телефоном сразу 
 const menuNav = document.querySelector("#menu");
 const hints = document.querySelector(".hints");
+const miniFooter = document.querySelector('.mini-footer')
+
 menuNav.style.display = 'none'
 hints.style.display = 'none'
-
-// Стрелки для перключения по секциям
-// const arrowUp = document.querySelector('.menu__arrow-prev')
-// const arrowDown = document.querySelector('.menu__arrow-next')
-
-// arrowUp.addEventListener('click', () => {
-//   fullpage_api.moveSectionUp();
-// })
-// arrowDown.addEventListener('click', () => {
-//   fullpage_api.moveSectionDown();
-// })
+miniFooter.style.display = 'none'
 
 // Добавляем активный класс элементу выезжающего меню --------
 const navItem = document.querySelectorAll('.nav__item')
@@ -274,8 +274,6 @@ const reviewsSlider = new Swiper(reviews, {
     }
   }
 })
-
-// Меню слайдер
 
 
 // Убираем checked с уже активного чекбокса

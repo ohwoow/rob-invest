@@ -189,7 +189,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 0;
+  z-index: 1;
 
   animation: showElement 0.8s forwards;
 
@@ -291,7 +291,7 @@ ul {
     margin-bottom: 24px;
 
     &:last-child {
-      margin: 0;
+      margin-bottom: 0;
     }
 
     &.active {
@@ -307,6 +307,21 @@ ul {
 
       span {
         margin-left: 15px;
+      }
+    }
+
+    &_margin-left {
+      a {
+        span {
+          margin-left: 16px;
+        }
+      }
+    }
+    &_last {
+      a {
+        span {
+          margin-left: 20px;
+        }
       }
     }
   }
@@ -385,6 +400,8 @@ ul {
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
+  
+  animation: showElement 0.8s forwards;
 
   a {
     font-weight: 500;
