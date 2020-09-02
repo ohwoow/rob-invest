@@ -87,7 +87,7 @@ new fullpage('#fullpage', {
     const isAnimatedHowItWorks = document.querySelectorAll('.how-it-works .is-animated')
     const isAnimatedSupport = document.querySelectorAll('.support .is-animated')
     const isAnimatedInfo = document.querySelectorAll('.info .is-animated')
-    const isAnimatedDefense = document.querySelectorAll('.defense .is-animated')
+    const isAnimatedDocumetation = document.querySelectorAll('.documentation .is-animated')
     const isAnimatedQuiz = document.querySelectorAll('.quiz .is-animated')
     const isAnimatedInstallation = document.querySelectorAll('.installation .is-animated')
     const isAnimatedReviews = document.querySelectorAll('.reviews .is-animated')
@@ -96,6 +96,7 @@ new fullpage('#fullpage', {
 
     let animationSpeed = 0.3
 
+    
     if (origin.index == 10) {
       linkToReji.style.display = 'block'
     } else {
@@ -155,8 +156,8 @@ new fullpage('#fullpage', {
         navLeftMenuSlider.slideNext()
         break
       case 5:
-        addAnimation(isAnimatedDefense, 'fadeInUp')
-        addDelay(isAnimatedDefense)
+        addAnimation(isAnimatedDocumetation, 'fadeInUp')
+        addDelay(isAnimatedDocumetation)
         break
       case 6:
         addAnimation(isAnimatedQuiz, 'fadeInUp')

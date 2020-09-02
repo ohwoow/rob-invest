@@ -221,12 +221,23 @@
     display: none;
   }
 
+
   .section__img {
     order: 1;
 
     img {
       width: 450px;
     }
+  }
+
+  .documentation__img {
+    margin-bottom: 15px;
+    img {
+      width: 360px;
+    }
+  }
+  .documentation__content {
+    margin-right: 0;
   }
 
   .reviews {
@@ -305,6 +316,11 @@
       }
     }
   }
+
+  .documentation {
+    padding-left: 70px;
+  }
+
   .quiz__container {
     padding-left: 0;
   }
@@ -681,7 +697,7 @@
   }
 
   .mini-footer {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -819,6 +835,20 @@
 
   .mobile-delete {
     display: none;
+  }
+
+  .files-documentation {
+    padding-left: 20px;
+
+    &__text {
+      text-decoration: underline;
+    }
+
+    &__download {
+      span {
+        display: none;
+      }
+    }
   }
 
   .form-quiz__wrapper {
